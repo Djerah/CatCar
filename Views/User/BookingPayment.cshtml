@@ -1,0 +1,63 @@
+﻿@model CatCar.Models.Rental
+
+@{
+    ViewData["Title"] = "BookingPayment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Booking Payment</h1>
+
+<div>
+    <h4>Rental</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CarNo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CarNo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CarName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CarName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+    </dl>
+        <br />
+        <br />
+    <dl>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TimeReturned)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TimeReturned)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RentalFee)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RentalFee)
+        </dd>
+        <a asp-action="MyBookings" class="btn btn-danger">Make Payment</a>
+    </dl>
+</div>
+

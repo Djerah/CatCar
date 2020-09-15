@@ -1,0 +1,59 @@
+﻿@model IEnumerable<CatCar.Models.Car>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Cars</h1>
+
+<p>
+    <a asp-action="CreateBooking" asp-controller="User" class="btn btn-primary">Book a Car</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr class="table-primary">
+
+            <th>
+                @Html.DisplayNameFor(model => model.CarName)
+
+            </th>
+            <th>
+                Image
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CarNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CarName)
+            </td>
+            <td>
+                <img src="~/Images/@item.Imgname" height="240" width="360" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CarNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+
+        </tr>
+}
+    </tbody>
+</table>

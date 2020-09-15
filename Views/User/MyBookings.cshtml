@@ -1,0 +1,64 @@
+﻿@model IEnumerable<CatCar.Models.Rental>
+
+@{
+    ViewData["Title"] = "MyBookings";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>My Bookings</h1>
+
+<p>
+    <a asp-action="CreateBooking" asp-controller="User" class="btn btn-primary">Book a Car</a>
+</p>
+<table class="table">
+    <thead>
+        <tr class="table-primary">
+            <th>
+                @Html.DisplayNameFor(model => model.CarNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CarName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RentalFee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CarNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CarName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RentalFee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndDate)
+            </td>
+            <td>
+                <a asp-action="ReturnCar" asp-route-id="@item.Id" class="btn btn-danger">End Booking</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

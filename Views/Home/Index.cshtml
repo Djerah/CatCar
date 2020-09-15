@@ -1,0 +1,83 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    
+}
+
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <style>
+            /* Make the image fully responsive */
+            .carousel-inner img {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+
+    </head>
+<div class="jumbotron">
+    <h2>Our New Cars</h2>
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"> </li>
+            <li data-target="#demo" data-slide-to="1"> </li>
+            <li data-target="#demo" data-slide-to="2"> </li>
+        </ul>
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/Images/Honda Accord.jpg" >
+            </div>
+            <div class="carousel-item">
+                <img src="~/Images/Honda HRV.jpg" >
+            </div>
+            <div class="carousel-item">
+                <img src="~/Images/Honda Accord.jpg">
+            </div>
+        </div>
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"> </span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"> </span>
+        </a>
+
+    </div>
+</div>
+
+
+<div class="row" style="margin:20px;grid-gap:50px 50px">
+    <div class="card text-white bg-primary mb-3" style="max-width: 20rem; background-color:black; margin:10px; margin-left:30px">
+        <div class="card-header">Booking</div>
+        <div class="card-body">
+            <h4 class="card-title">BOOK A CAR</h4>
+            <p class="card-text">Easily book a car with the time duration you want!</p>
+        </div>
+    </div>
+    <div class="card text-white bg-primary mb-3" style="max-width: 20rem; background-color:black;  margin:10px">
+        <div class="card-header">Rental</div>
+        <div class="card-body">
+            <h4 class="card-title">RENT BY THE HOUR</h4>
+            <p class="card-text">Rent our cars by the hour so that you don't have to spend more than you need to!</p>
+        </div>
+    </div>
+    <div class="card text-white bg-primary mb-3" style="max-width: 20rem; background-color:black; margin:10px">
+        <div class="card-header">Price</div>
+        <div class="card-body">
+            <h4 class="card-title">LOW RATES</h4>
+            <p class="card-text">Pay lower rates than other car-rental services!</p>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>

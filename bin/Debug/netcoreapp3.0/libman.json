@@ -1,0 +1,23 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "jquery@3.4.1",
+      "destination": "wwwroot/lib/jquery/",
+      "files": [
+        "jquery.min.js",
+        "core.js",
+        "jquery.js",
+        "jquery.slim.min.map",
+        "jquery.slim.js",
+        "jquery.slim.min.js",
+        "jquery.min.map"
+      ]
+    },
+    {
+      "library": "jQuery-Validation-Engine@2.6.4",
+      "destination": "wwwroot/lib/jQuery-Validation-Engine/"
+    }
+  ]
+}
